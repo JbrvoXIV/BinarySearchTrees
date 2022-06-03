@@ -9,5 +9,7 @@ public class Main {
         bst.insert(18);
         bst.insert(32);
         bst.printInOrder();
+
+        System.out.println(bst.search(32));
     }    
 }

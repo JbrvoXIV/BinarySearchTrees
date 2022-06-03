@@ -45,6 +45,20 @@ class BinarySearchTree {
         }
     }
 
+    public boolean search(int data) {
+        return searchRecursive(root, data);
+    }
+
+    public boolean searchRecursive(Node curNode, int data) {
+        if(curNode.data == data) {
+            return true;
+        } else if(curNode.data < data) {
+            return searchRecursive(curNode.right, data);
+        } else {
+            return searchRecursive(curNode.left, data);
+        }
+    }
+
     public void printInOrder() {
         printInOrderRecursive(root);
     }
@@ -54,7 +68,7 @@ class BinarySearchTree {
             return;
         }
         printInOrderRecursive(node.left);
-        System.out.printf("%d, ", node.data);
+        System.out.printf("%-4d", node.data);
         printInOrderRecursive(node.right);
     }
 }

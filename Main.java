@@ -10,6 +10,10 @@ public class Main {
         bst.insert(32);
         bst.printInOrder();
 
+        System.out.println();
         System.out.println(bst.search(32));
+        System.out.println(bst.search(20));
+        System.out.println(bst.search(30));
+        System.out.println(bst.search(99));
     }    
 }

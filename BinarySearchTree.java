@@ -50,13 +50,18 @@ class BinarySearchTree {
     }
 
     public boolean searchRecursive(Node curNode, int data) {
+        if(curNode == null) {
+            return false;
+        }
+
         if(curNode.data == data) {
             return true;
-        } else if(curNode.data < data) {
+        } else if(curNode.data <= data) {
             return searchRecursive(curNode.right, data);
-        } else {
+        } else if(curNode.data > data) {
             return searchRecursive(curNode.left, data);
         }
+        return false;
     }
 
     public void printInOrder() {

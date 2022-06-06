@@ -17,6 +17,14 @@ public class Main {
         System.out.println(bst.search(99));
 
         System.out.println();
+        System.out.println(bst.getParent(32));
+        System.out.println(bst.getParent(18));
+        System.out.println(bst.getParent(24));
+        System.out.println(bst.getParent(30));
+        System.out.println(bst.getParent(20));
+        System.out.println(bst.getParent(35));
+        
+        System.out.println();
         System.out.println(bst.remove(32));
         System.out.println(bst.remove(18));
         System.out.println(bst.remove(24));
@@ -25,5 +33,6 @@ public class Main {
         System.out.println(bst.remove(20));
         System.out.println(bst.remove(35));
         bst.printInOrder();
+
     }    
 }

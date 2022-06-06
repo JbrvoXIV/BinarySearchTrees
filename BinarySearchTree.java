@@ -133,4 +133,25 @@ class BinarySearchTree {
         System.out.printf("%-4d", node.data);
         printInOrderRecursive(node.right);
     }
+
+    public int getParent(int data) {
+        return getParentRecursive(root, null, data);
+    }
+
+    private int getParentRecursive(Node curNode, Node parNode, int data) {
+        if(curNode == null) {
+            return -1;
+        }
+
+        if(curNode.data == data) {
+            if(parNode == null) {
+                return -1;
+            }
+            return parNode.data;
+        } else if(data > curNode.data) {
+            return getParentRecursive(curNode.right, curNode, data);
+        } else {
+            return getParentRecursive(curNode.left, curNode, data);
+        }
+    }
 }
